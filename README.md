@@ -1,43 +1,36 @@
 <h2 style="font-size: 28px;">Hi there 👋🏽</h2
 
 <p>
-  I’m learning <strong>computer networking</strong>, <strong>Linux systems</strong>, and the <strong>foundations of cloud computing</strong> through hands-on labs and small experiments.<br/>
-  My focus right now is building a strong technical base before moving deeper into cloud infrastructure and security.
-</p>
+ I work with **computer networking**, **Linux systems**, and **small cloud labs**.  
+Most of what I build comes from curiosity — setting up things, breaking them, then fixing them properly.</p>
 
 <img align="right" src="https://user-images.githubusercontent.com/5713670/87202985-820dcb80-c2b6-11ea-9f56-7ec461c497c3.gif" width="150" style="margin-top: 10px;" />
 
 
 <hr/>
 
-<h3>📚 What I'm currently learning</h3>
-<ul>
-  <li><strong>Networking fundamentals</strong> (subnets, routing, NAT, DNS, VLANs)</li>
-  <li><strong>Linux basics</strong> (CLI, permissions, processes, filesystem)</li>
-  <li><strong>Virtualization & lab setups</strong> (VirtualBox, simple network topologies)</li>
-  <li><strong>Beginner AWS/Azure concepts</strong> (IAM, VPC/Virtual Networks, compute, storage)</li>
-</ul>
+### 🔧 What I'm exploring right now
+- Networking (routing, NAT, DNS, VLANs, port-forwarding)
+- Linux internals (processes, permissions, services, networking tools)
+- Virtualized labs (VirtualBox topologies, multi-node experiments)
+- Early cloud fundamentals (IAM, VPC networking, compute/storage)
 
-<h3>🛠️ What you'll find here</h3>
-<ul>
-  <li>Notes and diagrams for networking, Linux, and cloud fundamentals</li>
-  <li>Small lab configurations and experiments</li>
-  <li>Logs documenting what I learn each week</li>
-  <li>Simple scripts or configs created while studiying</li>
-</ul>
+---
 
-<hr/>
+### 📁 What lives in my GitHub
+- Notes + diagrams for networking and Linux
+- Lab configs, troubleshooting write-ups, and scripts
+- Logs tracking what I learn each week  
+- Infrastructure/security side-projects  
+  - **FormSeal** → E2EE contact-form framework using Cloudflare Workers, KV, and Ed25519
 
-<h3>🎯 Current Goals</h3>
-<ul>
-  <li>Strengthen networking + Linux fundamentals</li>
-  <li>Build small, repeatable cloud labs</li>
-  <li>Document everything clearly</li>
-  <li>Grow toward a cloud/infrastructure role</li>
-</ul>
+---
 
-<hr/>
+### 🎯 Direction
+Strengthening networking and Linux fundamentals → building repeatable labs → expanding into cloud infrastructure.  
+Security comes naturally once the base is strong.
 
-<p style="font-style: italic; color: gray;">
-  🚀 Long term direction: Networking → Cloud Foundations → Cloud Infrastructure → Security (later)
-</p>
+---
+
+### 🧩 Fun fact
+I break more things than I fix — but the things I fix stay fixed.
