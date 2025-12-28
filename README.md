@@ -23,7 +23,7 @@ Most of what I build comes from curiosity — setting things up, breaking them, 
 - Logs tracking what I learn each week  
 - Infrastructure/security side-projects  
   - **FormSeal** → E2EE contact-form framework using Cloudflare Workers, KV, Ed25519
-
+  - **FileSeal** → Offline, browser-based file encryption tool with no backend or uploads
 ---
 
 ### 🎯 Direction
