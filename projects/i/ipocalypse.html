@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPocalypse - Project overview</title>
+
+
+  <link rel="stylesheet" href="/assets/css/pages.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="top-nav">
+      <a href="/index.html">
+    <div class="nav-left">
+      <img src="/assets/images/logos/gg-projects.png" alt="logo" class="nav-logo">
+    </div>
+    </a>
+    
+    <a href="/projects/index.html" class="nav-right">← Back to projects</a>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="project-container">
+
+    <header class="project-header">
+      <h1>IPocalypse - Networking reference</h1>
+      <p class="subtitle">
+        A structured knowledge base of core networking concepts, built for clarity,
+        revision, and real-world understanding.
+      </p>
+      <p class="date-tag">Project created on: 7 Jul. 2025 | Last updated: 28 Dec. 2025 | Status: Archived</p>
+      <div class="section-divider"></div>
+    </header>
+
+    <section class="section intro">
+      <p>
+        IPocalypse is not a course, tutorial series, or certification guide.
+        It is a personal yet public reference — a place where networking concepts
+        are broken down, organized, and preserved in a way that stays readable over time.
+      </p>
+
+      <p>
+        The focus is fundamentals: how networks actually work, how components interact,
+        and how higher-level abstractions sit on top of simpler mechanics.
+      </p>
+
+      <p>
+        Everything here exists to reduce confusion, not to chase completeness.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Purpose</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Why it exists</h3>
+          <p>
+            Networking material is often fragmented across books, blogs, and vendor docs.
+            IPocalypse pulls the core ideas together into one consistent mental model.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>What it solves</h3>
+          <p>
+            It removes noise, over-complication, and context switching when revising
+            or cross-checking foundational topics.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>What it is not</h3>
+          <p>
+            Not a replacement for textbooks, labs, or real networks — just a clear
+            conceptual anchor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Scope</h2>
+
+      <p>
+        IPocalypse focuses on the layers and concepts that form the backbone of
+        networking knowledge, before specialization or tooling.
+      </p>
+
+      <ul class="feature-list">
+        <li><strong>Foundations:</strong> What networks are and why they exist.</li>
+        <li><strong>Components:</strong> Devices, roles, and physical/logical layouts.</li>
+        <li><strong>Communication:</strong> Addressing, protocols, and data flow.</li>
+        <li><strong>Models:</strong> OSI and TCP/IP as thinking tools, not dogma.</li>
+        <li><strong>Security context:</strong> Where VPNs, proxies, and TOR actually fit.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Structure</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Markdown-first</h3>
+          <p>
+            Content is written in plain markdown for longevity and easy revision.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Diagram-supported</h3>
+          <p>
+            Visuals are used only when they add clarity, not decoration.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Incremental growth</h3>
+          <p>
+            Topics are added when they are understood well enough to explain cleanly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+        <div class="simple-ss-grid">
+        <img src="/assets/images/projects/ipocalypse/root.png" class="ss-small" onclick="openPreview(this.src)">
+      </div>
+
+    <section class="section">
+      <h2>Final note</h2>
+
+      <p>
+        IPocalypse is a living reference. It evolves alongside deeper study,
+        not according to a release schedule.
+      </p>
+
+      <p>
+        Its value comes from accuracy, restraint, and continuity — not scale.
+      </p>
+    </section>
+      
+       <section class="section">
+      <h2>Links</h2>
+
+      <p><strong>GitHub:</strong> <a href="https://github.com/grayguava/IPocalypse">https://github.com/grayguava/IPocalypse</a></p>
+      <p><strong>Live Demo:</strong> <a href="#">No Live demo or deployments available</a></p>
+    </section>
+
+  </main>
+
+  <footer class="bottom-footer">
+    <span>© 2025 Gray-Guava | Built Deliberately.</span>
+  </footer>
+
+  <script>
+function openPreview(src) {
+  document.getElementById("previewImg").src = src;
+  document.getElementById("imgPreview").style.display = "flex";
+}
+function closePreview() {
+  document.getElementById("imgPreview").style.display = "none";
+}
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form backend & contact system - Project overview</title>
+
+
+  <link rel="stylesheet" href="/assets/css/pages.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="top-nav">
+      <a href="/index.html">
+    <div class="nav-left">
+  <img src="/assets/images/logos/gg-projects.png" alt="logo" class="nav-logo">
+</div>
+    </a>
+    
+    <a href="/projects/index.html" class="nav-right">← Back to projects</a>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="project-container">
+
+    <header class="project-header">
+      <h1>Form backend & contact form system</h1>
+      <p class="subtitle">
+        A fully serverless, secure, dependency-free communication pipeline built on Cloudflare Workers.
+      </p>
+      <p class="date-tag">Project created on: 25 Nov. 2025 | Last updated: 26 Nov. 2025</p>
+      <div class="section-divider"></div>
+    </header>
+
+    <section class="section intro">
+      <p>This project is the complete backend powering the contact form on my portfolio website. I built a fully serverless workflow based on Cloudflare Workers and KV Storage, ensuring reliability, privacy, and total control over how data flows through the system.</p>
+
+      <p>The architecture removes the need for cookies, sessions, or frameworks. Admin access is protected using a cryptographically secure ultra-long one-time URL token. Once used, the token invalidates itself immediately, eliminating persistent authentication entirely.</p>
+
+      <p>The final result is a globally fast, maintenance-free communication system designed for long-term stability and complete data ownership.</p>
+    </section>
+
+    <section class="section">
+      <h2>Overview</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Problem</h3>
+          <p>Third-party form services add limitations—rate caps, dependency risks, outages, and pricing tiers. I needed a fully independent, long-term backend for message handling.</p>
+        </div>
+
+        <div class="card">
+          <h3>Solution</h3>
+          <p>A custom Worker that validates, timestamps, normalizes, and stores each submission in KV, combined with a hidden admin dashboard for secure review.</p>
+        </div>
+
+        <div class="card">
+          <h3>Core Stack</h3>
+          <p>Cloudflare Workers · KV Storage · One-time tokens · HTML templating · Serverless routing · Honeypot anti-bot field</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Architecture</h2>
+
+      <img src="/assets/images//projects/contactbackend/architecture.png" class="screenshot">
+
+      <p>The system has four layers: client submission, Worker processing, KV storage, and admin rendering.</p>
+
+      <ul class="feature-list">
+        <li><strong>Client submission:</strong> Captures message, email, timezone, and an invisible honeypot to block bots.</li>
+
+        <li><strong>Worker endpoint:</strong> Validates input, normalizes timestamps to UTC, extracts IP, and generates a unique sortable ID.</li>
+
+        <li><strong>KV storage:</strong> Each submission becomes a structured JSON record with full metadata.</li>
+
+        <li><strong>Renderer:</strong> Converts KV entries into an Excel-style table UI inside a hidden admin route.</li>
+
+        <li><strong>Admin security:</strong> Uses a 128–256 char ultra-long one-time token, hashed in KV. Zero sessions, zero cookies.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Key Features</h2>
+
+      <div class="grid">
+        <div class="card"><h3>Secure-by-default</h3><p>No cookies, no sessions. One-time URL tokens ensure admin access cannot be reused.</p></div>
+
+        <div class="card"><h3>UTC normalization</h3><p>Every entry is stored in <code>YYYY-MM-DD HH:MM:SS UTC</code>, guaranteeing consistent ordering.</p></div>
+
+        <div class="card"><h3>Anti-spam honeypot</h3><p>Invisible field + rate limiting blocks automated submissions without CAPTCHAs.</p></div>
+
+        <div class="card"><h3>KV storage model</h3><p>Durable, globally replicated, schema-free structured storage.</p></div>
+
+        <div class="card"><h3>Admin renderer</h3><p>Server-rendered sorting table with no external dependencies.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Screenshots</h2>
+
+      <div class="simple-ss-grid">
+  <img src="/assets/images/projects/contactbackend/contact-form.png" class="ss-small" onclick="openPreview(this.src)">
+  <img src="/assets/images/projects/contactbackend/admin-login-page.png" class="ss-small" onclick="openPreview(this.src)">
+  <img src="/assets/images/projects/contactbackend/results-table-adminpage.png" class="ss-small" onclick="openPreview(this.src)">
+</div>
+
+<!-- Preview Modal -->
+<div id="imgPreview" class="img-preview" onclick="closePreview()">
+  <img id="previewImg" src="">
+</div>
+
+     
+
+    </section>
+
+    <section class="section">
+      <h2>Sample code snippet</h2>
+
+      <p>This snippet shows how each message is normalized to UTC and safely stored in KV:</p>
+
+      <pre class="code">
+<span class="comment">// Normalize current time to UTC</span>
+const now = new Date();
+const utc = now.toISOString().replace("T", " ").replace("Z", " UTC");
+
+<span class="comment">// Store structured message in KV</span>
+await MESSAGES.put(id, JSON.stringify({
+  name,
+  email,
+  message,
+  ip,
+  client_tz,
+  client_time,
+  utc_time: utc
+}));
+      </pre>
+    </section>
+
+    <section class="section">
+  <h2>Possible future improvements</h2>
+
+  <ul class="arrow-list">
+    <li>Filtering (Email / IP / Date)</li>
+    <li>CSV export</li>
+    <li>Time-based token expiration</li>
+    <li>Encrypted KV values</li>
+    <li>Webhook alerts</li>
+  </ul>
+</section>
+
+
+
+    <section class="section">
+      <h2>Links</h2>
+
+      <p><strong>GitHub:</strong> <a href="https://github.com/grayguava/contactform-backend/">https://github.com/grayguava/contactform-backend/</a></p>
+      <p><strong>Live Demo:</strong> <a href="#">No Live demo or deployments available</a></p>
+    </section>
+
+  </main>
+
+  <footer class="bottom-footer">
+    <span>© 2025 Gray-Guava | Built Deliberately.</span>
+  </footer>
+
+  <script>
+function openPreview(src) {
+  document.getElementById("previewImg").src = src;
+  document.getElementById("imgPreview").style.display = "flex";
+}
+function closePreview() {
+  document.getElementById("imgPreview").style.display = "none";
+}
+</script>
+  
+</body>
+</html>

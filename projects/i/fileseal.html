@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FileSeal - Project overview</title>
+
+
+  <link rel="stylesheet" href="/assets/css/pages.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="top-nav">
+      <a href="/index.html">
+    <div class="nav-left">
+      <img src="/assets/images/logos/gg-projects.png" alt="logo" class="nav-logo">
+    </div>
+    </a>
+    
+    <a href="/projects/index.html" class="nav-right">← Back to projects</a>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="project-container">
+
+    <header class="project-header">
+      <h1>FileSeal - offline file encryption</h1>
+      <p class="subtitle">
+        A lightweight, browser-based file encryption tool designed for local-only usage and zero server trust.
+      </p>
+      <p class="date-tag">Project created on: 6 Dec. 2025 | Last updated: 29 Dec. 2025</p>
+      <div class="section-divider"></div>
+    </header>
+
+    <section class="section intro">
+      <p>
+        FileSeal is a small, focused security project built to explore practical client-side encryption without relying
+        on servers, accounts, or third-party services. All encryption and decryption happens entirely inside the browser,
+        ensuring files never leave the user’s device.
+      </p>
+
+      <p>
+        The tool converts files into self-contained <code>.fs</code> containers using password-derived keys and modern
+        authenticated encryption. Each encrypted file includes the metadata required for safe restoration, without
+        exposing the original content.
+      </p>
+
+      <p>
+        FileSeal is intentionally minimal: no telemetry, no uploads, no backend, and no persistent state. The goal was
+        clarity, correctness, and local control — not feature sprawl.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Overview</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Problem</h3>
+          <p>
+            Many file encryption tools rely on native software installs, cloud storage, or opaque binaries. I wanted a
+            transparent, browser-native solution that works offline and keeps files fully local.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Solution</h3>
+          <p>
+            A single-page, browser-based encryptor that derives keys from a user password and outputs a portable,
+            self-describing encrypted container.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Core stack</h3>
+          <p>
+            Web Crypto API · AES-GCM · PBKDF2 · Vanilla JavaScript · HTML/CSS · Zero dependencies
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Architecture</h2>
+
+
+      <p>
+        FileSeal follows a simple, linear flow: file ingestion, metadata preparation, encryption, and container assembly.
+        The reverse path performs validation, decryption, and restoration.
+      </p>
+
+      <ul class="feature-list">
+        <li><strong>File input:</strong> Reads file bytes and captures basic metadata (name and MIME type).</li>
+
+        <li><strong>Key derivation:</strong> Derives a strong encryption key from the user password using PBKDF2 and a random salt.</li>
+
+        <li><strong>Encryption:</strong> Encrypts metadata and file bytes together using authenticated encryption.</li>
+
+        <li><strong>Container format:</strong> Prepends a small plaintext header containing magic bytes, version, salt, and IV.</li>
+
+        <li><strong>Restoration:</strong> Validates the container, decrypts payload, and restores the original file.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Key Features</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Offline by design</h3>
+          <p>Works entirely without network access. Files never leave the browser.</p>
+        </div>
+
+        <div class="card">
+          <h3>Authenticated encryption</h3>
+          <p>Detects tampering and incorrect passwords during decryption.</p>
+        </div>
+
+        <div class="card">
+          <h3>Self-contained containers</h3>
+          <p>Each encrypted file includes everything needed for safe restoration.</p>
+        </div>
+
+        <div class="card">
+          <h3>No dependencies</h3>
+          <p>Uses native browser APIs only — no libraries, frameworks, or builds.</p>
+        </div>
+
+        <div class="card">
+          <h3>Minimal attack surface</h3>
+          <p>No backend, no storage, no cookies, no persistent state.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Screenshots</h2>
+
+      <div class="simple-ss-grid">
+        <img src="/assets/images/projects/fileseal/home.png" class="ss-small" onclick="openPreview(this.src)">
+        <img src="/assets/images/projects/fileseal/encrypt.png" class="ss-small" onclick="openPreview(this.src)">
+        <img src="/assets/images/projects/fileseal/decrypt.png" class="ss-small" onclick="openPreview(this.src)">
+      </div>
+
+      <!-- Preview Modal -->
+      <div id="imgPreview" class="img-preview" onclick="closePreview()">
+        <img id="previewImg" src="">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Sample code snippet</h2>
+
+      <p>This snippet shows how a random IV and salt are generated before encryption:</p>
+
+      <pre class="code">
+<span class="comment">// Generate randomness for each encryption</span>
+const salt = crypto.getRandomValues(new Uint8Array(16));
+const iv   = crypto.getRandomValues(new Uint8Array(12));
+
+<span class="comment">// Derive key from password</span>
+const key = await deriveKey(password, salt);
+      </pre>
+    </section>
+
+    <section class="section">
+      <h2>Possible future improvements</h2>
+
+      <ul class="arrow-list">
+        <li>Password strength estimation</li>
+        <li>Streaming encryption for large files</li>
+        <li>Multiple file support</li>
+        <li>Container version upgrades</li>
+        <li>Optional metadata minimization</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Links</h2>
+
+      <p><strong>GitHub:</strong> <a href="https://github.com/grayguava/fileseal">https://github.com/grayguava/fileseal</a></p>
+      <p><strong>Live Demo:</strong> <a href="https://fileseal.pages.dev/">https://fileseal.pages.dev/</a></p>
+    </section>
+
+  </main>
+
+  <footer class="bottom-footer">
+    <span>© 2025 Gray-Guava | Built Deliberately.</span>
+  </footer>
+
+  <script>
+function openPreview(src) {
+  document.getElementById("previewImg").src = src;
+  document.getElementById("imgPreview").style.display = "flex";
+}
+function closePreview() {
+  document.getElementById("imgPreview").style.display = "none";
+}
+  </script>
+
+</body>
+</html>

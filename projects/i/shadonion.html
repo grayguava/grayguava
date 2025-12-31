@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadonion - Project overview</title>
+
+
+  <link rel="stylesheet" href="/assets/css/pages.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="top-nav">
+      <a href="/index.html">
+    <div class="nav-left">
+      <img src="/assets/images/logos/gg-projects.png" alt="logo" class="nav-logo">
+    </div>
+    </a>
+    
+    <a href="/projects/index.html" class="nav-right">← Back to projects</a>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="project-container">
+
+    <header class="project-header">
+      <h1>Shadonion — Privacy & OPSEC knowledge base</h1>
+      <p class="subtitle">
+        A static, privacy-first website explaining digital privacy and OPSEC without hype, tracking, or corporate framing.
+      </p>
+      <p class="date-tag">Project created on: 23 Jul. 2025 | Last updated: 28 Dec. 2025 | Status: Archived</p>
+      <div class="section-divider"></div>
+    </header>
+
+    <section class="section intro">
+      <p>
+        Shadonion is a content-focused privacy site built for people who want clarity instead of slogans and
+        grounded explanations instead of influencer-tier advice. It is intentionally static, readable,
+        and inspectable in plain text.
+      </p>
+
+      <p>
+        The project exists to explain how tracking, profiling, and digital exposure actually work — without
+        pretending tools are magic or that reading alone makes anyone private.
+      </p>
+
+      <p>
+        There is no analytics, no telemetry, no JavaScript bloat, and no attempt to turn privacy into a product.
+        This is education and perspective, not a service.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Overview</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Problem</h3>
+          <p>
+            Most privacy resources are either oversimplified marketing or fear-driven paranoia that skips
+            real-world trade-offs and threat awareness.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Solution</h3>
+          <p>
+            A static site that explains privacy and OPSEC concepts directly, without assuming blind trust
+            in tools, vendors, or infrastructure.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Core stack</h3>
+          <p>
+            HTML5 · CSS3 · No JavaScript frameworks · No analytics · No cookies · No telemetry
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Scope & assumptions</h2>
+
+      <p>
+        Shadonion deliberately avoids making guarantees. It assumes readers want less tracking and better
+        decision-making — not magical invisibility.
+      </p>
+
+      <ul class="feature-list">
+          <li><strong>Not a Tool:</strong> This project does not provide anonymity infrastructure.</li>
+        <li><strong>Not Tor:</strong> The name is thematic, not technical.</li>
+        <li><strong>Not a Shield:</strong> Reading about privacy does not make you private.</li>
+        <li><strong>User Responsibility:</strong> Correct application of tools is always on the user.</li>
+        <li><strong>Threat Awareness:</strong> Encourages thinking before tool selection.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Content coverage</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Web & browser privacy</h3>
+          <p>Tracking, fingerprinting, profiling, and modern web exposure.</p>
+        </div>
+
+        <div class="card">
+          <h3>Basic OPSEC</h3>
+          <p>Practical threat awareness without paranoia cosplay.</p>
+        </div>
+
+        <div class="card">
+          <h3>Mobile privacy</h3>
+          <p>Phone-level risks, OS limitations, and realistic expectations.</p>
+        </div>
+
+        <div class="card">
+          <h3>Offline practices</h3>
+          <p>Data hygiene, storage habits, and non-digital risks.</p>
+        </div>
+
+        <div class="card">
+          <h3>Trade-offs</h3>
+          <p>Clear discussion of compromises instead of absolutist claims.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Screenshots</h2>
+
+      <div class="simple-ss-grid">
+        <img src="/assets/images/projects/shadonion/home.png" class="ss-small" onclick="openPreview(this.src)">
+        <img src="/assets/images/projects/shadonion/mobile.png" class="ss-small" onclick="openPreview(this.src)">
+        <img src="/assets/images/projects/shadonion/finance.png" class="ss-small" onclick="openPreview(this.src)">
+      </div>
+
+      <!-- Preview Modal -->
+      <div id="imgPreview" class="img-preview" onclick="closePreview()">
+        <img id="previewImg" src="">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Project structure</h2>
+
+      <pre class="code">
+/
+├── index.html        // Entry point
+├── *.html            // Topic-specific pages
+├── contact.html      // Contact / attribution
+└── assets/           // Styles and static resources
+      </pre>
+    </section>
+
+    <section class="section">
+      <h2>Status & Licensing</h2>
+
+      <ul class="arrow-list">
+        <li>Archived — no active development</li>
+        <li>No backend, no build step, no dependencies</li>
+        <li>Code licensed under MIT</li>
+        <li>Content licensed under CC BY 4.0</li>
+        <li>Free to clone, mirror, or self-host</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Links</h2>
+
+      <p><strong>GitHub:</strong> <a href="https://github.com/grayguava/formseal">https://github.com/grayguava/formseal</a></p>
+      <p><strong>Live Demo:</strong> <a href="https://shadonion.pages.dev/">https://shadonion.pages.dev/</a></p>
+    </section>
+
+  </main>
+
+  <footer class="bottom-footer">
+    <span>© 2025 Gray-Guava | Built Deliberately.</span>
+  </footer>
+
+  <script>
+function openPreview(src) {
+  document.getElementById("previewImg").src = src;
+  document.getElementById("imgPreview").style.display = "flex";
+}
+function closePreview() {
+  document.getElementById("imgPreview").style.display = "none";
+}
+  </script>
+
+</body>
+</html>
