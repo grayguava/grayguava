@@ -1,36 +1,37 @@
-<h2 style="font-size: 28px;">Hi there 👋🏽</h2
+<h2 style="font-size: 28px;">Hi there 👋🏽</h2>
 
 <p>
- I work with <strong>computer networking</strong>, <strong>Linux systems</strong>, and <strong>small cloud labs</strong>.
-Most of what I build comes from curiosity — setting things up, breaking them, then fixing them the right way.</p>
+I spend most of my time learning by building and experimenting with systems — usually around <strong>Linux</strong>, <strong>basic networking</strong>, and small self-hosted or browser-based projects.
+I don’t have everything figured out yet; I mostly learn by setting things up, breaking them, and understanding what went wrong.
+</p>
 
 <img align="right" src="https://user-images.githubusercontent.com/5713670/87202985-820dcb80-c2b6-11ea-9f56-7ec461c497c3.gif" width="150" style="margin-top: 10px;" />
 
-
 <hr/>
 
-### 🔧 What I'm exploring right now
-- Networking (routing, NAT, DNS, VLANs, port-forwarding)
-- Linux internals (processes, permissions, services, networking tools)
-- Virtualized labs (VirtualBox topologies, multi-node experiments)
-- Early cloud fundamentals (IAM, VPC networking, compute/storage)
+### 🔧 What I’m currently experimenting with
+- General networking concepts (how things connect, route, and fail)
+- Linux basics (processes, permissions, services, command-line tools)
+- Small virtual labs and local setups
+- Trying out cloud concepts at a surface level (just enough to understand what’s happening)
 
 ---
 
-### 📁 What lives in my GitHub
-- Notes + diagrams for networking and Linux
-- Lab configs, troubleshooting write-ups, and scripts
-- Logs tracking what I learn each week  
-- Infrastructure/security side-projects  
-  - **FormSeal** → E2EE contact-form framework using Cloudflare Workers, KV, Ed25519
-  - **FileSeal** → Offline, browser-based file encryption tool with no backend or uploads
+#### 📁 What lives in my GitHub
+- Small experiments and side projects built out of curiosity
+- Repositories that exist mainly to make things work, not to look polished
+- Occasional notes or comments when something is likely to be forgotten later
+- A few focused tools I built to explore specific ideas:
+  - **FormSeal** → an experiment around end-to-end encrypted form submissions
+  - **ByteSeal** → a browser-only, offline file encryption tool
+
 ---
 
-### 🎯 Direction
-Strengthening networking and Linux fundamentals → building repeatable labs → expanding into cloud infrastructure.  
-Security comes naturally once the base is strong.
+### 🎯 Direction (very much in progress)
+Right now I’m focused on building fundamentals and getting comfortable with how systems behave in practice.
+I’m still exploring different areas and figuring out what I want to go deeper into long-term.
 
 ---
 
 ### 🧩 Fun fact
-I break more things than I fix — but the things I fix stay fixed.
+I break things often — mostly because that’s how I end up learning how they actually work.
