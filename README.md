@@ -11,7 +11,7 @@ I build and break things to understand how they work — mostly around Linux, ne
 ### 🔧 Currently building / learning
 - LibreProbe — a self-hosted probing and testing tool
 - Cloud fundamentals — understanding what's actually happening under the abstractions
-- OSS tooling — building things meant to be used, not just explored
+- Open-Source tooling — building things meant to be used, not just explored
 - Systems internals — how Linux, processes, and networks behave under pressure
 - A little security — enough to understand the surface, not the whole field
 
