@@ -1,6 +1,6 @@
 <h2 style="font-size: 28px;">Hi there 👋🏽</h2>
 
-<img align="right" src="https://octodex.github.com/images/spidertocat.png" width="200" style="margin-top:10px;">
+<img align="right" src="https://octodex.github.com/images/manufacturetocat.png" width="200" style="margin-top:10px;">
 
 <p>
 I build and break things to understand how they work — mostly around Linux, networking, and systems. Open source is where most of that ends up. I'm drawn to tools that are small, focused, and actually do what they say.
@@ -19,8 +19,6 @@ I build and break things to understand how they work — mostly around Linux, ne
 
 ---
 
-<img align="right" src="https://octodex.github.com/images/repo.png" width="200" style="margin-top:10px;">
-
 ### 📁 What's here
 - Experiments and side projects built out of curiosity
 - Repos that exist to make things work, not to look polished
@@ -29,7 +27,7 @@ I build and break things to understand how they work — mostly around Linux, ne
 A few focused tools:
 - **Libreprobe** → web-based connection stability test
 - **formseal** → end-to-end encrypted form submissions
-- **ByteSeal** → browser-only, offline file encryption
+- **Byteseal [archived]** → browser-only, offline file encryption
 
 ---
 
