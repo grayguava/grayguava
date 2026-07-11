@@ -33,6 +33,3 @@ A few focused tools:
 
 ### 🌀 Currently obsessing over
 How distributed systems fail — not the happy path, the edge cases.
-
-
-![](https://github-readme-streak-stats.herokuapp.com/?user=grayguava&theme=dark&hide_border=true)<br/>
