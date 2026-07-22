@@ -1,0 +1,5 @@
+grayguava.png:
+91cdd5900a3bb408e45256b5e2338c7f170d8fb19e903c6162d0fb73ded0f5c8
+
+grayguava_transparent.png:
+0a52f45f7b9164d1d6bacf621dc32fddb9ce7fc6dfaf5013667238c40beaa939
